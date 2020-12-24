@@ -2,7 +2,7 @@
 	<div>
 		<ul class="list">
 			<li class="post" v-for="item in listItems">
-				<div class="points">{{item.points || 0}}</div>
+				<div class="points">{{item.points || '-'}}</div>
 				<div>
 					<p class="title">
 						<template v-if="item.domain">
