@@ -14,15 +14,6 @@ export const store = new Vuex.Store({
     item: {},
   },
   getters: {
-    newsItems(state) {
-      return state.news
-    },
-    askItems(state) {
-      return state.ask
-    },
-    jobsItems(state) {
-      return state.jobs
-    },
     fetchedItem(state) {
       return state.item
     }
