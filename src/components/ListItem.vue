@@ -28,37 +28,7 @@
 export default {
 	computed: {
 		listItems() {
-			const name = this.$route.name;
-			switch (name) {
-				case "news":
-					return this.$store.state.news;
-					break;
-				case "ask":
-					return this.$store.state.ask;
-					break;
-				case "jobs":
-					return this.$store.state.jobs;
-					break;
-				default:
-					return;
-			}
-		}
-	},
-	created() {
-		// this.$store.dispatch("FETCH_NEWS");
-		const name = this.$route.name;
-		switch (name) {
-			case "news":
-				this.$store.dispatch("FETCH_NEWS");
-				break;
-			case "ask":
-				this.$store.dispatch("FETCH_ASK");
-				break;
-			case "jobs":
-				this.$store.dispatch("FETCH_JOBS");
-				break;
-			default:
-				return;
+			return this.$store.state.list;
 		}
 	}
 };
