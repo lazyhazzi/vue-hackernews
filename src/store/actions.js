@@ -7,8 +7,9 @@ import {
 export default {
   FETCH_LIST({ commit }, pageName) {
     return fetchList(pageName)
-      .then(({ data }) => {
-        commit('SET_LIST', data)
+      .then((response) => {
+        commit('SET_LIST', response.data)
+        return response;
       })
       .catch(error => console.log(error));
   },
