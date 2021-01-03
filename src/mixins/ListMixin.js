@@ -9,8 +9,5 @@ export default {
         bus.$emit("end:spinner");
       })
       .catch(error => console.log(error));
-  },
-  render(createElement) {
-    return createElement(ListView);
   }
 }
